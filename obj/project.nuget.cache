@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "7pkVxbne452bVllX24K9darc5ocmvycX7NsLg91fAyAmyNhzcdf4nuwGiL1T90PsooyF7xicDP8k7C8UQMfoxw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Emmanuel\\Desktop\\PatientManagementSystem\\PatientManagementSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Emmanuel\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\Emmanuel\\.nuget\\packages\\mahapps.metro\\2.4.10\\mahapps.metro.2.4.10.nupkg.sha512",
+    "C:\\Users\\Emmanuel\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\Emmanuel\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}

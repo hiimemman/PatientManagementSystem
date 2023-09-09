@@ -1,0 +1,13 @@
+﻿<mah:MetroWindow  x:Class="PatientManagementSystem.MainWindow"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatientManagementSystem"
+        mc:Ignorable="d"
+        Title="PatientMangementSystem" Height="450" Width="800">
+    <Grid Margin="30,26,23,30">
+        <mah:WindowCommands HorizontalAlignment="Left" Height="100" Margin="0,-42,0,0" VerticalAlignment="Top" Width="100"/>
+    </Grid>
+</mah:MetroWindow>
