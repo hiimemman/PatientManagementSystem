@@ -40,5 +40,15 @@ namespace PatientManagementSystem
 
             //btnLogin.Visibility = Visibility.Collapsed;
         }
+
+        private void LaunchGitHubSite_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Testing");
+        }
+
+        private void DeployCupCakes_Click(object sender, RoutedEventArgs e)
+        {
+            // deploy some CupCakes...
+        }
     }
 }

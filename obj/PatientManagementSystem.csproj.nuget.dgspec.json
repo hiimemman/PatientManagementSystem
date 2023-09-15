@@ -40,9 +40,25 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
+            },
             "MahApps.Metro": {
               "target": "Package",
               "version": "[2.4.10, )"
+            },
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
+            "MahApps.Metro.IconPacks.FontAwesome": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
+            "MahApps.Metro.IconPacks.Material": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             }
           },
           "imports": [
