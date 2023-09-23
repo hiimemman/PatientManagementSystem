@@ -1,5 +1,5 @@
 ﻿PatientManagementSystem
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Emmanuel\Desktop\PatientManagementSystem\App.xaml
 51553243498
 
-102114859810
-243-1028809390
+8-483771177
+236-1320038609
 Dashboard.xaml;LogIn.xaml;PatientManagementSystem.xaml;Patients.xaml;Register.xaml;
 
-False
+True
 

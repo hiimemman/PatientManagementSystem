@@ -163,7 +163,7 @@
             <lvc:CartesianChart Name="chart" Margin="19,210,28,2">
                 <!-- Add series and axis here -->
             </lvc:CartesianChart>
-            <Label Content="Patients Chart" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="20" Width="225" FontWeight="Bold" Margin="253,173,0,0"/>
+            <Label Content="Patients Chart" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="20" Width="146" FontWeight="Bold" Margin="0,173,0,0"/>
         </Grid>
     </Grid>
 </UserControl>

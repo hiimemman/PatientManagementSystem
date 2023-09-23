@@ -1,0 +1,9 @@
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\Dashboard.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\LogIn.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientManagementSystem.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\Patients.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\Register.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientManagementSystem_MarkupCompile.cache
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientManagementSystem_MarkupCompile.lref
