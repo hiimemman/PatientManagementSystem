@@ -21,7 +21,13 @@ namespace PatientManagementSystem.Databases
         private void InitializeDatabase()
         {
             // Define the database file path.
-            string databasePath = "/PatientManagementSystem.db"; // Replace with your database file path.
+            string databasePath = "Databases/PatientManagementSystem.db"; // Replace with your database file path.
+
+            // Check if the database file exists.
+            if (!File.Exists(databasePath))
+            {
+                throw new FileNotFoundException("Database file not found at the specified path.", databasePath);
+            }
 
             // Create the SQLite connection.
             string connectionString = $"Data Source={databasePath};Version=3;";

@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace PatientManagementSystem
 {
     /// <summary>
@@ -29,26 +30,35 @@ namespace PatientManagementSystem
         {
             InitializeComponent();
 
- 
+            
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
-            // Navigate to the login page
-            LogIn loginPage = new LogIn();
-            //contentControl.Content = loginPage;
 
-            //btnLogin.Visibility = Visibility.Collapsed;
+        public void GoToLogIn()
+        {
+            loginControl.Visibility = Visibility.Visible;
+            registerControl.Visibility = Visibility.Collapsed;
         }
 
-        private void LaunchGitHubSite_Click(object sender, RoutedEventArgs e)
+        public void GoToRegister()
         {
-            MessageBox.Show("Testing");
+            loginControl.Visibility = Visibility.Collapsed;
+            registerControl.Visibility = Visibility.Visible;
+        }
+    
+        public void GoToDashboard()
+        {
+            loginControl.Visibility = Visibility.Collapsed;
+            registerControl.Visibility = Visibility.Collapsed;
+            dashboardControl.Visibility = Visibility.Visible;
         }
 
-        private void DeployCupCakes_Click(object sender, RoutedEventArgs e)
+        public void GoToPatient()
         {
-            // deploy some CupCakes...
+            loginControl.Visibility = Visibility.Collapsed;
+            registerControl.Visibility = Visibility.Collapsed;
+            dashboardControl.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Visible;
         }
     }
 }

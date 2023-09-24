@@ -4,47 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PatientManagementSystem"
-             mc:Ignorable="d" d:DesignWidth="800" Height="951">
+             mc:Ignorable="d" Width="auto" Height="auto">
 
-    <Grid Background="#FF082F49" Margin="0,-63,0,-59">
-        <Image Margin="0,4,1,-4" Source="/assets/images/ezaret-logo.png" Stretch="Fill" Opacity="0.08" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.108"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0.68"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Height="auto" VerticalAlignment="Top">
+        <Grid Background="Transparent" Margin="0,0,0,0" Width="748">
 
-        <Label HorizontalAlignment="Left" Margin="164,131,0,0" VerticalAlignment="Top" Foreground="#FFF3E9E9"/>
-        <Label Content="First name" HorizontalAlignment="Left" Margin="31,111,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" FontSize="30" BorderBrush="#FF075985"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="34,951,0,0" VerticalAlignment="Top" Width="727" Height="48" FontSize="30" Background="#FF2DD4BF" Click="Button_Click" FontFamily="Arial" Foreground="#FFF7F5F5"/>
-        <Label Content="REGISTER" FontSize="50" Foreground="#FFF3E9E9" Margin="282,8,284,684" FontFamily="Century Gothic" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="32,1018,0,0" TextWrapping="Wrap" Text="Already have an account?" VerticalAlignment="Top" Foreground="#FF99F6E4" FontSize="20"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" FontSize="30" BorderBrush="#FF075985"/>
-        <TextBox HorizontalAlignment="Left" Margin="531,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" FontSize="30" BorderBrush="#FF075985"/>
-        <Label Content="Middle name" HorizontalAlignment="Left" Margin="282,111,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <Label Content="Last name" HorizontalAlignment="Left" Margin="527,111,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="31,257,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="736" FontSize="30" BorderBrush="#FF075985"/>
-        <Label Content="Sex" HorizontalAlignment="Left" Margin="403,404,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <Label HorizontalAlignment="Left" Margin="164,131,0,0" VerticalAlignment="Top" Foreground="#FFF3E9E9"/>
+            <Label Content="First name" HorizontalAlignment="Left" Margin="31,111,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <TextBox Name ="txtFirstname"  HorizontalAlignment="Left" Margin="31,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" FontSize="30" BorderBrush="#FF075985"/>
 
-        <ComboBox HorizontalAlignment="Left" Margin="405,456,0,0" VerticalAlignment="Top" Width="362" Height="50">
-            <ComboBoxItem Content="Male" />
-            <ComboBoxItem Content="Female" />
-        </ComboBox>
-        <Label Content="Birthdate" HorizontalAlignment="Left" Margin="31,404,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <DatePicker HorizontalAlignment="Left" Margin="31,457,0,0" VerticalAlignment="Top" Height="50" Width="369"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,609,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="361" FontSize="30" BorderBrush="#FF075985"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="32,554,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="405,554,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <TextBox HorizontalAlignment="Left" Margin="400,609,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="361" FontSize="30" BorderBrush="#FF075985"/>
-        <Label Content="Complete Address" HorizontalAlignment="Left" Margin="32,713,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
-        <TextBox Name="AddressTextBox" TextWrapping="Wrap" Text="Enter your address" Margin="34,768,37,179" />
 
-    </Grid>
+            <Label Content="Middle name" HorizontalAlignment="Left" Margin="282,111,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <Label Content="Last name"  HorizontalAlignment="Left" Margin="529,111,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <Label Content="Email"  HorizontalAlignment="Left" Margin="31,257,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <TextBox Name ="txtEmail" HorizontalAlignment="Left" Margin="32,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="683" FontSize="30" BorderBrush="#FF075985"/>
+            <PasswordBox Name ="txtPassword" HorizontalAlignment="Left" Margin="31,470,0,0"  VerticalAlignment="Top" Width="311" FontSize="30" BorderBrush="#FF075985"/>
+            <Label Content="Password" HorizontalAlignment="Left" Margin="32,394,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="400,394,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FFF3E9E9"/>
+            <PasswordBox Name ="txtConfirmPassword"  HorizontalAlignment="Left" Margin="378,470,0,0"  VerticalAlignment="Top" Width="337" FontSize="30" BorderBrush="#FF075985"/>
+            <TextBox Name ="txtLastname" HorizontalAlignment="Left" Margin="503,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" FontSize="30" BorderBrush="#FF075985"/>
+            <TextBox  Name ="txtMiddlename" HorizontalAlignment="Left" Margin="277,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" FontSize="30" BorderBrush="#FF075985"/>
 
+            <Button Content="Submit" HorizontalAlignment="Left" Margin="32,560,0,0" VerticalAlignment="Top" Width="683" Height="48" FontSize="30" Background="#FF2DD4BF" Click="RegisterSubmit_Click" FontFamily="Arial" Foreground="#FFF7F5F5"/>
+
+
+            <TextBlock HorizontalAlignment="Left" Margin="503,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"><Hyperlink Click="GoToLogin_Click"><Run Text="Already have an account?" Foreground="#FF99F6E4"/></Hyperlink></TextBlock>
+            <Label Content="REGISTER" FontSize="50" Foreground="#FFF3E9E9" Margin="255,20,259,547" FontFamily="Century Gothic" FontWeight="Bold"/>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

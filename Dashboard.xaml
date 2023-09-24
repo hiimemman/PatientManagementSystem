@@ -7,6 +7,7 @@
              xmlns:local="clr-namespace:PatientManagementSystem"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
         <!-- Sidebar -->
         <Grid.ColumnDefinitions>
@@ -166,4 +167,5 @@
             <Label Content="Patients Chart" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="20" Width="146" FontWeight="Bold" Margin="0,173,0,0"/>
         </Grid>
     </Grid>
+
 </UserControl>

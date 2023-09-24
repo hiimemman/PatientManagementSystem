@@ -7,24 +7,20 @@
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PatientManagementSystem" xmlns:iconPacks1="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:iconPacks2="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Modern"
                   mc:Ignorable="d"
-        Title="PatientMangementSystem" Height="450" Width="800" GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+        Title="Patient Management System" Height="auto" Width="auto" GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
                  ResizeMode="CanResizeWithGrip"
                  WindowStartupLocation="CenterScreen">
 
-    <mah:MetroWindow.LeftWindowCommands>
-        <mah:WindowCommands>
-            
-        </mah:WindowCommands>
-    </mah:MetroWindow.LeftWindowCommands>
+    <Grid Background="#FF082F49">
 
-    <mah:MetroWindow.RightWindowCommands>
-        <mah:WindowCommands>
-            
-        </mah:WindowCommands>
-    </mah:MetroWindow.RightWindowCommands>
-
-    <Grid>
-
-        <!--  Your content  -->
+        <Image Margin="0,0,0,0" Source="pack://application:,,,/PatientManagementSystem;component/assets/images/ezaret-logo.png" Stretch="Fill" Opacity="0.08"/>
+        <Grid x:Name="contentGrid">
+            <local:LogIn x:Name="loginControl" Visibility="Visible"/>
+            <local:Register x:Name="registerControl" Visibility="Collapsed"/>
+            <local:Dashboard  x:Name="dashboardControl" Visibility="Collapsed"/>
+            <local:Patient x:Name="patientControl" Visibility="Collapsed"/>
+        </Grid>  
+        
+       
     </Grid>
 </mah:MetroWindow>

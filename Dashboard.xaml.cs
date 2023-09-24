@@ -20,11 +20,9 @@ namespace PatientManagementSystem
     /// </summary>
     public partial class Dashboard : UserControl
     {
-
         public Dashboard()
         {
-
+            InitializeComponent();
         }
-
     }
 }
