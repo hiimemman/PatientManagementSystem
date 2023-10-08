@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,13 +30,16 @@ namespace PatientManagementSystem
         public MainWindow()
         {
             InitializeComponent();
-
-            
+        
+            CloseLoadingScreen();
         }
 
 
         public void GoToLogIn()
         {
+
+            loadingScreen.Visibility = Visibility.Hidden;
+            contentGrid.Visibility = Visibility.Visible;
             loginControl.Visibility = Visibility.Visible;
             registerControl.Visibility = Visibility.Collapsed;
         }
@@ -59,6 +63,14 @@ namespace PatientManagementSystem
             registerControl.Visibility = Visibility.Collapsed;
             dashboardControl.Visibility = Visibility.Collapsed;
             patientControl.Visibility = Visibility.Visible;
+        }
+
+        public async void CloseLoadingScreen()
+        {
+          
+           
+            await Task.Delay(5000);
+            GoToLogIn();
         }
     }
 }

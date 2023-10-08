@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PatientManagementSystem</id>
+    <version>1.0.0</version>
+    <authors>PatientManagementSystem</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0-windows7.0">
+        <dependency id="FontAwesome.WPF" version="4.7.0.9" exclude="Build,Analyzers" />
+        <dependency id="LiveCharts.Wpf" version="0.9.7" exclude="Build,Analyzers" />
+        <dependency id="MahApps.Metro" version="2.4.10" exclude="Build,Analyzers" />
+        <dependency id="MahApps.Metro.IconPacks" version="4.11.0" exclude="Build,Analyzers" />
+        <dependency id="MahApps.Metro.IconPacks.FontAwesome" version="4.11.0" exclude="Build,Analyzers" />
+        <dependency id="MahApps.Metro.IconPacks.Material" version="4.11.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Data.Sqlite.Core" version="7.0.11" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="SQLite" version="3.13.0" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.core" version="2.1.6" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SQLite" version="1.0.118" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net7.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net7.0-windows7.0/assets/images/ezarate-loading.wmv" buildAction="Content" />
+      <files include="any/net7.0-windows7.0/assets/images/ezaret-logo.png" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\Emmanuel\Desktop\PatientManagementSystem\bin\Debug\net7.0-windows\PatientManagementSystem.runtimeconfig.json" target="lib\net7.0-windows7.0\PatientManagementSystem.runtimeconfig.json" />
+    <file src="C:\Users\Emmanuel\Desktop\PatientManagementSystem\bin\Debug\net7.0-windows\PatientManagementSystem.dll" target="lib\net7.0-windows7.0\PatientManagementSystem.dll" />
+    <file src="C:\Users\Emmanuel\Desktop\PatientManagementSystem\assets\images\ezarate-loading.wmv" target="content\assets\images\ezarate-loading.wmv" />
+    <file src="C:\Users\Emmanuel\Desktop\PatientManagementSystem\assets\images\ezarate-loading.wmv" target="contentFiles\any\net7.0-windows7.0\assets\images\ezarate-loading.wmv" />
+    <file src="C:\Users\Emmanuel\Desktop\PatientManagementSystem\assets\images\ezaret-logo.png" target="content\assets\images\ezaret-logo.png" />
+    <file src="C:\Users\Emmanuel\Desktop\PatientManagementSystem\assets\images\ezaret-logo.png" target="contentFiles\any\net7.0-windows7.0\assets\images\ezaret-logo.png" />
+  </files>
+</package>

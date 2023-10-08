@@ -97,7 +97,7 @@
         <Grid Grid.ColumnSpan="2" Margin="100,0,0,0" Background="#FF1E293B">
             <Label Content="Manage patients" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="30" Width="244" FontWeight="Bold"/>
 
-            <DataGrid x:Name="dataGrid" Margin="10,120,0,60">
+            <DataGrid x:Name="dataGrid" Margin="10,120,0,60" SelectionChanged="dataGrid_SelectionChanged">
                 <DataGrid.Columns>
                     <!-- Existing columns (Name and Value) -->
                     <DataGridTextColumn Header="Firstname" Binding="{Binding Name}" />

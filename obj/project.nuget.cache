@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "54JyMckEZIzZ5Lx+XvNTOc4h2MHDUs0urvNUaUTbYolG2SRWAfUgFk6NAgr41XTEKQfO4W+8jdBkouG4hmRVzg==",
+  "dgSpecHash": "qknepkwF8an2CV5RySxkt7nj9TLbY+26HXvX3nJnFbgsXfv4fAQPqJGuFMyNLrM/Td4BPORvbEPfIqjq10Ck1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emmanuel\\Desktop\\PatientManagementSystem\\PatientManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emmanuel\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\Emmanuel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Emmanuel\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
     "C:\\Users\\Emmanuel\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\Emmanuel\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
     "C:\\Users\\Emmanuel\\.nuget\\packages\\mahapps.metro\\2.4.10\\mahapps.metro.2.4.10.nupkg.sha512",
@@ -43,6 +44,16 @@
     "C:\\Users\\Emmanuel\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'FontAwesome.WPF 4.7.0.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

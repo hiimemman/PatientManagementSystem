@@ -13,14 +13,18 @@
 
     <Grid Background="#FF082F49">
 
-        <Image Margin="0,0,0,0" Source="pack://application:,,,/PatientManagementSystem;component/assets/images/ezaret-logo.png" Stretch="Fill" Opacity="0.08"/>
-        <Grid x:Name="contentGrid">
+        <local:LoadingScreen Margin="0,0,0,0" x:Name="loadingScreen" Visibility="Visible"/>
+
+        <Grid x:Name="contentGrid" Visibility="Hidden">
+            
+            <Image Margin="0,0,0,0" Source="pack://application:,,,/PatientManagementSystem;component/assets/images/ezaret-logo.png" Stretch="Fill" Opacity="0.08"/>
             <local:LogIn x:Name="loginControl" Visibility="Visible"/>
             <local:Register x:Name="registerControl" Visibility="Collapsed"/>
             <local:Dashboard  x:Name="dashboardControl" Visibility="Collapsed"/>
             <local:Patient x:Name="patientControl" Visibility="Collapsed"/>
-        </Grid>  
-        
-       
+        </Grid>
+
+
     </Grid>
+
 </mah:MetroWindow>
