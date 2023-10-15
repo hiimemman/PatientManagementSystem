@@ -45,4 +45,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="ChooseRole.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
 </Project>

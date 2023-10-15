@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ChooseRole.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,11 +22,17 @@
     <Compile Update="Patient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PatientLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ChooseRole.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Dashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Patient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientLogin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PatientManagementSystem.xaml">

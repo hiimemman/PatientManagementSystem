@@ -49,7 +49,7 @@ namespace PatientManagementSystem
 
             _dbManager = new DatabaseManager();
 
-            GetAllUsers();
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -57,59 +57,7 @@ namespace PatientManagementSystem
 
         }
 
-        private void GetAllUsers()
-        {
-
-            try
-            {
-                _dbManager.OpenConnection();
-
-                // Create a list to store user data.
-                List<User> users = new List<User>();
-
-                // Perform your database query using a SQLiteCommand.
-                using (SQLiteCommand command = _dbManager.CreateCommand())
-                {
-                    command.CommandText = "SELECT * FROM tbl_users";
-
-                    // Execute the query and fetch data.
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Assuming the first column is the ID and the second column is the Name.
-                            int id = reader.GetInt32(0);
-                            string firstname = reader.GetString(1);
-                            string lastname = reader.GetString(2);
-                            string email = reader.GetString(3);
-                            string password = reader.GetString(4);
-                            string role = reader.GetString(5);
-                            string date = reader.GetString(6);
-                            // Add the user to the list.
-                            users.Add(new User { Id = id, Firstname = firstname, Lastname = lastname, Email = email, Password = password, Role = role, Date_Created = date });
-
-                        }
-                    }
-
-
-                }
-
-                // Serialize the 'users' list to JSON.
-                string json = JsonConvert.SerializeObject(users);
-
-                // Now 'json' contains the JSON representation of your data.
-                //MessageBox.Show(json);
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions.
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-            finally
-            {
-                _dbManager.CloseConnection();
-            }
-        }
+      
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {

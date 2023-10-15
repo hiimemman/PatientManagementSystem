@@ -34,10 +34,17 @@ namespace PatientManagementSystem
             CloseLoadingScreen();
         }
 
+        public void GoToChooseRole()
+        {
+            loadingScreen.Visibility = Visibility.Hidden;
+            chooseRole.Visibility = Visibility.Visible;
+            registerControl.Visibility = Visibility.Collapsed;
+        }
 
         public void GoToLogIn()
         {
 
+            chooseRole.Visibility = Visibility.Collapsed;
             loadingScreen.Visibility = Visibility.Hidden;
             contentGrid.Visibility = Visibility.Visible;
             loginControl.Visibility = Visibility.Visible;
@@ -70,7 +77,7 @@ namespace PatientManagementSystem
           
            
             await Task.Delay(5000);
-            GoToLogIn();
+            GoToChooseRole();
         }
     }
 }

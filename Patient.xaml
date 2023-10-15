@@ -97,36 +97,12 @@
         <Grid Grid.ColumnSpan="2" Margin="100,0,0,0" Background="#FF1E293B">
             <Label Content="Manage patients" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="30" Width="244" FontWeight="Bold"/>
 
-            <DataGrid x:Name="dataGrid" Margin="10,120,0,60" SelectionChanged="dataGrid_SelectionChanged">
-                <DataGrid.Columns>
-                    <!-- Existing columns (Name and Value) -->
-                    <DataGridTextColumn Header="Firstname" Binding="{Binding Name}" />
-                    <DataGridTextColumn Header="Middlename" Binding="{Binding Name}" />
-                    <DataGridTextColumn Header="Lastname" Binding="{Binding Name}" />
-                    <DataGridTextColumn Header="Email" Binding="{Binding Value}" />
-                    <DataGridTextColumn Header="Age" Binding="{Binding Value}" />
-                    <DataGridTextColumn Header="Birthdate" Binding="{Binding Value}" />
-                    <DataGridTextColumn Header="Status" Binding="{Binding Value}" />
-                    <DataGridTextColumn Header="Address" Binding="{Binding Value}" />
-                    <!-- Edit Column -->
-                    <DataGridTemplateColumn Header="Actions">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Edit" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+            <DataGrid x:Name="dataGrid" Margin="10,120,0,60" SelectionChanged="dataGrid_SelectionChanged" ItemsSource="{Binding users}">
 
-
-                </DataGrid.Columns>
+              
             </DataGrid>
             <Button Content="Add new" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="#FF86EFAC" Width="101"/>
             <TextBox HorizontalAlignment="Left" Margin="384,81,0,0" TextWrapping="Wrap" Text="Search for item here...." VerticalAlignment="Top" Width="301" />
-            <Button Content="Prev" HorizontalAlignment="Left" Margin="554,405,0,0" VerticalAlignment="Top"/>
-            <Button Content="Next" HorizontalAlignment="Left" Margin="648,405,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Margin="596,405,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="47" />
-            <Label Content="Pages" HorizontalAlignment="Left" Margin="10,408,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontFamily="Arial" FontSize="15"/>
-            <ComboBox HorizontalAlignment="Left" Margin="68,409,0,0" VerticalAlignment="Top" Width="85"/>
 
         </Grid>
     </Grid>
