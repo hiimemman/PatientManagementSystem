@@ -1,21 +1,11 @@
 ﻿using PatientManagementSystem.Databases;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Data.SQLite;
 using Newtonsoft.Json;
-using System.Reflection.PortableExecutable;
+
 
 namespace PatientManagementSystem
 {
@@ -38,6 +28,9 @@ namespace PatientManagementSystem
         // Create a list to store user data.
         List<Patients> patients = new List<Patients>();
 
+        // Assuming you have a reference to the MainWindow instance
+        MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+
         public Patient()
         {
             InitializeComponent();
@@ -47,7 +40,7 @@ namespace PatientManagementSystem
             // Get all data from the database.
             GetAllPatients();
 
-            // Bind the list of data to the DataGrid.
+
             dataGrid.ItemsSource = patients;
         }
 
@@ -83,11 +76,10 @@ namespace PatientManagementSystem
                             string email = reader.GetString(4);
                             int age = reader.GetInt32(5);
                             string birthdate = reader.GetString(6);
-                            string status = reader.GetString(7);
-                            string address = reader.GetString(8);
+                            string address = reader.GetString(7);
 
                             // Add the user to the list.
-                            patients.Add(new Patients { Id = id, Firstname = firstname, Middlename = middlename, Lastname = lastname, Email = email, Age = age, BirthDate = birthdate, Status = status, Address = address});
+                            patients.Add(new Patients { Id = id, Firstname = firstname, Middlename = middlename, Lastname = lastname, Email = email, Age = age, BirthDate = birthdate, Address = address});
 
                         }
                     }
@@ -96,10 +88,11 @@ namespace PatientManagementSystem
                 }
 
                 // Serialize the 'users' list to JSON.
-                string json = JsonConvert.SerializeObject(patients);
+                //string json = JsonConvert.SerializeObject(patients);
 
                 // Now 'json' contains the JSON representation of your data.
                 //MessageBox.Show(json);
+               
             }
             catch (Exception ex)
             {
@@ -112,5 +105,14 @@ namespace PatientManagementSystem
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.ShowAddPatient();
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            GetAllPatients();
+        }
     }
 }

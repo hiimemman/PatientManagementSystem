@@ -11,6 +11,7 @@
     <None Remove="assets\images\ezarate-loading.mp4" />
     <None Remove="assets\images\ezarate-loading.wmv" />
     <None Remove="assets\images\ezaret-logo.png" />
+    <None Remove="Databases\PatientManagementSystem.db" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\images\ezaret-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Databases\PatientManagementSystem.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -37,12 +41,6 @@
     <PackageReference Include="SQLite" Version="3.13.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="2.1.6" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Databases\PatientManagementSystem.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

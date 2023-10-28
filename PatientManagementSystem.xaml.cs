@@ -66,10 +66,18 @@ namespace PatientManagementSystem
 
         public void GoToPatient()
         {
+            contentGrid.Visibility = Visibility.Visible;
+            addPatientControl.Visibility = Visibility.Collapsed;
             loginControl.Visibility = Visibility.Collapsed;
             registerControl.Visibility = Visibility.Collapsed;
             dashboardControl.Visibility = Visibility.Collapsed;
             patientControl.Visibility = Visibility.Visible;
+        }
+
+        public void ShowAddPatient()
+        {
+            addPatientControl.Visibility = Visibility.Visible;
+            contentGrid.Visibility = Visibility.Collapsed;
         }
 
         public async void CloseLoadingScreen()

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Emmanuel\Desktop\PatientManagementSystem\App.xaml
-8-688045028
-3-1404291476
-111541397757
+91812057138
+4-571486582
+12-575937924
 245-599418435
-ChooseRole.xaml;Dashboard.xaml;LoadingScreen.xaml;LogIn.xaml;Patient.xaml;PatientLogin.xaml;PatientManagementSystem.xaml;Register.xaml;
+AddPatient.xaml;ChooseRole.xaml;Dashboard.xaml;LoadingScreen.xaml;LogIn.xaml;Patient.xaml;PatientLogin.xaml;PatientManagementSystem.xaml;Register.xaml;
 
 False
 

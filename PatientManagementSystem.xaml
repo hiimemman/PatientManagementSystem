@@ -27,8 +27,10 @@
             <local:Dashboard  x:Name="dashboardControl" Visibility="Collapsed"/>
             <local:Patient x:Name="patientControl" Visibility="Collapsed"/>
         </Grid>
-
-
+      
+            <local:AddPatient x:Name="addPatientControl" Visibility="Collapsed" />
+        
+        
     </Grid>
 
 </mah:MetroWindow>
