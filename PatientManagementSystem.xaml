@@ -26,9 +26,16 @@
             <local:Register x:Name="registerControl" Visibility="Collapsed"/>
             <local:Dashboard  x:Name="dashboardControl" Visibility="Collapsed"/>
             <local:Patient x:Name="patientControl" Visibility="Collapsed"/>
+            <local:LaboratoryTest x:Name="labTestControl" Visibility="Collapsed"/>
+            <local:DrugTest x:Name="drugTestControl" Visibility="Collapsed" />
+            <local:Fecalysis x:Name="fecalysisControl" Visibility="Collapsed"/>
+            <local:Hermatology x:Name="hermatologyControl" Visibility="Collapsed"/>
+            <local:Radiographic x:Name="radiographicControl" Visibility="Collapsed"/>
+            <local:Users x:Name="usersControl" Visibility="Collapsed"/>
+            <local:UserSettings x:Name="userSettingsControl" Visibility="Collapsed" />
         </Grid>
       
-            <local:AddPatient x:Name="addPatientControl" Visibility="Collapsed" />
+           
         
         
     </Grid>

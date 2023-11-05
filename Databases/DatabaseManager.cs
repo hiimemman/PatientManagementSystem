@@ -26,7 +26,8 @@ namespace PatientManagementSystem.Databases
             // Check if the database file exists.
             if (!File.Exists(databasePath))
             {
-                throw new FileNotFoundException("Database file not found at the specified path.", databasePath);
+                SQLiteConnection.CreateFile(databasePath);
+    
             }
 
             // Create the SQLite connection.

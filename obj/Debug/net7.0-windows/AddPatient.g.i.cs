@@ -117,7 +117,7 @@ namespace PatientManagementSystem {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PatientManagementSystem;V1.0.0.0;component/addpatient.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PatientManagementSystem;component/addpatient.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddPatient.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

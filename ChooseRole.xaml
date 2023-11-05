@@ -9,10 +9,10 @@
       >
 
     <Grid  Margin="0,0,0,0" Background="Transparent">
-        <Label Content="Login as"  HorizontalAlignment="Center" FontSize="50" VerticalAlignment="Top" Foreground="#FFF3E9E9" Margin="0,154,0,0" FontFamily="Century Gothic" FontWeight="Bold"/>
+        <Label Content="Login as"  HorizontalAlignment="Center" FontSize="50" VerticalAlignment="Top" Foreground="#FFF3E9E9" Margin="0,128,0,0" FontFamily="Century Gothic" FontWeight="Bold"/>
+        <Button Content="Patient" HorizontalAlignment="Center" Margin="0,204,0,0" VerticalAlignment="Top" Width="320" Height="48" FontSize="30" Background="#FF60A5FA" Click="GoToLogIn_Click" FontFamily="Arial" Foreground="#FFF7F5F5"/>
+        <Button Content="Admin" HorizontalAlignment="Center" Margin="0,263,0,0" VerticalAlignment="Top" Width="320" Height="48" FontSize="30" Background="#FF60A5FA" Click="GoToLogIn_Click" FontFamily="Arial" Foreground="#FFF7F5F5"/>
 
-        <Button Content="Admin" HorizontalAlignment="Center" Margin="0,256,0,0" VerticalAlignment="Top" Width="320" Height="48" FontSize="30" Background="#FF60A5FA" Click="GoToLogIn_Click" FontFamily="Arial" Foreground="#FFF7F5F5"/>
-        <Button Content="Patient" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Center" Width="320" Height="48" FontSize="30" Background="#FF60A5FA" Click="GoToLogIn_Click" FontFamily="Arial" Foreground="#FFF7F5F5"/>
 
 
     </Grid>

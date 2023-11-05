@@ -1,19 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Emmanuel\Desktop\PatientManagementSystem\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AddPatient.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="ChooseRole.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Dashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DrugTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Fecalysis.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Hermatology.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LaboratoryTest.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="LoadingScreen.xaml.cs">
@@ -28,18 +39,36 @@
     <Compile Update="PatientLogin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Radiographic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Users.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AddPatient.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="ChooseRole.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DrugTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Fecalysis.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Hermatology.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LaboratoryTest.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoadingScreen.xaml">
@@ -57,7 +86,16 @@
     <Page Update="PatientManagementSystem.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Radiographic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Register.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Users.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserSettings.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
