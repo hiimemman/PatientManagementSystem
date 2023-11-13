@@ -7,12 +7,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid>
+        <Grid.HorizontalAlignment>Center</Grid.HorizontalAlignment>
+        <Grid.VerticalAlignment>Center</Grid.VerticalAlignment>
+
+        <Button Margin="117,30,643,530" Width="40" Height="40" Background="Transparent" Click ="GoBackToChooseRole_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/assets/images/arrow-left-custom.png" />
+
+            </StackPanel>
+        </Button>
         <Label Content="LOGIN" FontSize="50" Foreground="#FFF3E9E9" Margin="316,59,316,473" FontFamily="Century Gothic" FontWeight="Bold"/>
         <Label Content="Email" FontSize="30" Foreground="#FFF3E9E9" Margin="117,141,602,400"/>
         <TextBox x:Name ="txtEmail"  HorizontalAlignment="Left" Margin="117,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="591" FontSize="30" BorderBrush="#FF075985"/>
         <Label Content="Password" FontSize="30" Foreground="#FFF3E9E9" Margin="117,295,534,253"/>
         <PasswordBox Name="txtPassword" PasswordChar ="*"  HorizontalAlignment="Left" Margin="117,353,0,0" VerticalAlignment="Top" Width="591" FontSize="30" BorderBrush="#FF075985"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="117,481,0,0" VerticalAlignment="Top" Width="591" Height="48" FontSize="30" Background="#FF60A5FA" FontFamily="Arial" Foreground="#FFF7F5F5"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="117,481,0,0" VerticalAlignment="Top" Width="591" Height="48" FontSize="30" Background="#FF60A5FA" FontFamily="Arial" Foreground="#FFF7F5F5" Click="Login_Click" />
 
     </Grid>
 </UserControl>

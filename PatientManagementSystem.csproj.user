@@ -39,6 +39,9 @@
     <Compile Update="PatientLogin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PatientRadiographic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Radiographic.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -84,6 +87,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PatientManagementSystem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientRadiographic.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Radiographic.xaml">

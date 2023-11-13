@@ -17,12 +17,15 @@
 
 
         <local:ChooseRole x:Name="chooseRole" Visibility="Collapsed"/>
+
+        <local:LogIn x:Name="loginControl" Visibility="Collapsed"/>
+
+        <local:PatientLogin x:Name="patientLogin" Visibility="Collapsed"/>
+
         <Grid x:Name="contentGrid" Visibility="Hidden">
             
             <Image Margin="0,0,0,0" Source="pack://application:,,,/PatientManagementSystem;component/assets/images/ezaret-logo.png" Stretch="Fill" Opacity="0.08"/>
            
-            <local:PatientLogin x:Name="patientLogin" Visibility="Collapsed"/>
-            <local:LogIn x:Name="loginControl" Visibility="Collapsed"/>
             <local:Register x:Name="registerControl" Visibility="Collapsed"/>
             <local:Dashboard  x:Name="dashboardControl" Visibility="Collapsed"/>
             <local:Patient x:Name="patientControl" Visibility="Collapsed"/>
@@ -34,9 +37,11 @@
             <local:Users x:Name="usersControl" Visibility="Collapsed"/>
             <local:UserSettings x:Name="userSettingsControl" Visibility="Collapsed" />
         </Grid>
-      
-           
-        
+
+        <Grid x:Name="patientContentGrid" Visibility="Hidden">
+            <local:PatientRadiographic x:Name="patientRadiographicControl" Visibility="Collapsed"/>
+
+        </Grid>
         
     </Grid>
 

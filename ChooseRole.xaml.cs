@@ -38,5 +38,10 @@ namespace PatientManagementSystem
         {
             GoToAdminLogin();
         }
+
+        public void GoToPatientLogin_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.GoToPatientLogin();
+        }
     }
 }

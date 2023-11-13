@@ -105,6 +105,13 @@ namespace PatientManagementSystem
         {
             mainWindow.GoToRegister();
         }
+
+        private void GoBackToChooseRole_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.GoToChooseRole();
+        }
+
+
     }
 
 

@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using PatientManagementSystem.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace PatientManagementSystem
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-
+     
         private LogIn loginPage;
 
 
@@ -34,10 +35,49 @@ namespace PatientManagementSystem
             CloseLoadingScreen();
         }
 
+        public void LogoutPatient()
+        {
+            UserSession.ClearUser();
+            GoToPatientLogin();
+        }
+
+        public void LogoutAdmin()
+        {
+            GoToLogIn();
+        }
+
+        public void GoToPatientRadiographic()
+        {
+            
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Visible;
+            patientRadiographicControl.Visibility = Visibility.Visible;
+        }
+
         public void GoToChooseRole()
         {
             loadingScreen.Visibility = Visibility.Hidden;
             chooseRole.Visibility = Visibility.Visible;
+            registerControl.Visibility = Visibility.Collapsed;
+
+            contentGrid.Visibility = Visibility.Collapsed;
+            loginControl.Visibility = Visibility.Collapsed;
+
+            patientContentGrid.Visibility = Visibility.Collapsed;
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+        }
+
+        public void GoToPatientLogin()
+        {
+
+            chooseRole.Visibility = Visibility.Collapsed;
+            loadingScreen.Visibility = Visibility.Hidden;
+            contentGrid.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Collapsed;
+            patientLogin.Visibility = Visibility.Visible;
+            loginControl.Visibility = Visibility.Collapsed;
             registerControl.Visibility = Visibility.Collapsed;
         }
 
@@ -46,8 +86,10 @@ namespace PatientManagementSystem
 
             chooseRole.Visibility = Visibility.Collapsed;
             loadingScreen.Visibility = Visibility.Hidden;
-            contentGrid.Visibility = Visibility.Visible;
+            contentGrid.Visibility = Visibility.Collapsed;
             loginControl.Visibility = Visibility.Visible;
+            patientContentGrid.Visibility = Visibility.Collapsed;
+            patientLogin.Visibility = Visibility.Collapsed;
             registerControl.Visibility = Visibility.Collapsed;
         }
 
@@ -184,18 +226,18 @@ namespace PatientManagementSystem
 
         public void GoToUserSettings()
         {
-            contentGrid.Visibility = Visibility.Visible;
-            loginControl.Visibility = Visibility.Collapsed;
-            registerControl.Visibility = Visibility.Collapsed;
-            dashboardControl.Visibility = Visibility.Collapsed;
-            patientControl.Visibility = Visibility.Collapsed;
-            labTestControl.Visibility = Visibility.Collapsed;
-            drugTestControl.Visibility = Visibility.Collapsed;
-            fecalysisControl.Visibility = Visibility.Collapsed;
-            hermatologyControl.Visibility = Visibility.Collapsed;
-            radiographicControl.Visibility = Visibility.Collapsed;
-            usersControl.Visibility = Visibility.Collapsed;
-            userSettingsControl.Visibility = Visibility.Visible;
+            //contentGrid.Visibility = Visibility.Visible;
+            //loginControl.Visibility = Visibility.Collapsed;
+            //registerControl.Visibility = Visibility.Collapsed;
+            //dashboardControl.Visibility = Visibility.Collapsed;
+            //patientControl.Visibility = Visibility.Collapsed;
+            //labTestControl.Visibility = Visibility.Collapsed;
+            //drugTestControl.Visibility = Visibility.Collapsed;
+            //fecalysisControl.Visibility = Visibility.Collapsed;
+            //hermatologyControl.Visibility = Visibility.Collapsed;
+            //radiographicControl.Visibility = Visibility.Collapsed;
+            //usersControl.Visibility = Visibility.Collapsed;
+            //userSettingsControl.Visibility = Visibility.Visible;
         }
 
         public void ShowAddPatient()

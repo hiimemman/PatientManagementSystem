@@ -284,5 +284,9 @@ namespace PatientManagementSystem
             mainWindow.GoToUserSettings();
         }
 
+        private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.LogoutAdmin();
+        }
     }
 }

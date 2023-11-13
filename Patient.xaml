@@ -103,6 +103,16 @@
 
                 </Button>
 
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="100" Click="ButtonLogout_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/logout-variant-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Logout" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+
             </StackPanel>
         </Grid>
         <!-- Main Content -->

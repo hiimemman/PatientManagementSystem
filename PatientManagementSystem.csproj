@@ -18,9 +18,24 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <None Remove="assets\images\arrow-left-custom.png" />
+    <None Remove="assets\images\baseline_account_circle_white_24dp.png" />
+    <None Remove="assets\images\baseline_dashboard_white_24dp.png" />
+    <None Remove="assets\images\baseline_description_black_24dp.png" />
+    <None Remove="assets\images\baseline_description_white_24dp.png" />
+    <None Remove="assets\images\baseline_format_list_numbered_white_24dp.png" />
+    <None Remove="assets\images\baseline_people_black_24dp.png" />
+    <None Remove="assets\images\baseline_people_white_24dp.png" />
+    <None Remove="assets\images\baseline_personal_injury_white_24dp.png" />
+    <None Remove="assets\images\baseline_reviews_white_24dp.png" />
+    <None Remove="assets\images\baseline_stacked_bar_chart_white_24dp.png" />
+    <None Remove="assets\images\emoticon-poop-custom.png" />
     <None Remove="assets\images\ezarate-loading.mp4" />
     <None Remove="assets\images\ezarate-loading.wmv" />
     <None Remove="assets\images\ezaret-logo.png" />
+    <None Remove="assets\images\logout-variant-custom.png" />
+    <None Remove="assets\images\pill-custom.png" />
+    <None Remove="assets\images\pill.png" />
     <None Remove="assets\images\radiology-box-custom.png" />
     <None Remove="assets\images\radiology-box.png" />
     <None Remove="assets\images\test-tube-custom.png" />
@@ -28,6 +43,39 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="assets\images\arrow-left-custom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_account_circle_white_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_description_black_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_description_white_24dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_format_list_numbered_white_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_people_black_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_people_white_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_personal_injury_white_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_reviews_white_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\baseline_stacked_bar_chart_white_24dp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\emoticon-poop-custom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="assets\images\ezarate-loading.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -36,6 +84,15 @@
     </Content>
     <Content Include="assets\images\ezaret-logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\logout-variant-custom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\pill-custom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\pill.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\images\radiology-box-custom.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -73,18 +130,6 @@
     <PackageReference Include="SQLitePCLRaw.core" Version="2.1.6" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
    
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="assets\images\emoticon-poop-custom.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\images\pill-custom.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\images\pill.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

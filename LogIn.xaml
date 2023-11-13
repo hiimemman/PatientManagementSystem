@@ -11,7 +11,12 @@
         <Grid.HorizontalAlignment>Center</Grid.HorizontalAlignment>
         <Grid.VerticalAlignment>Center</Grid.VerticalAlignment>
 
-       
+        <Button Margin="171,23,597,589" Width="40" Height="40" Background="Transparent" Click ="GoBackToChooseRole_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/assets/images/arrow-left-custom.png" />
+               
+            </StackPanel>
+        </Button>
         <Label HorizontalAlignment="Left" Margin="164,131,0,0" VerticalAlignment="Top" Foreground="#FFF3E9E9">
             <Label Content="Email" FontSize="30" Foreground="#FFF3E9E9"/>
         </Label>
@@ -31,6 +36,6 @@
                 <TextBlock Text="Register Here" Foreground="#FF99F6E4"/>
             </Hyperlink>    
         </TextBlock>
-        
+
     </Grid>
 </UserControl>

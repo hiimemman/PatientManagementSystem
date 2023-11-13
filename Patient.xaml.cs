@@ -280,6 +280,11 @@ namespace PatientManagementSystem
 
         }
 
+        private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.LogoutAdmin();
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             mainWindow.GoToPatient();
