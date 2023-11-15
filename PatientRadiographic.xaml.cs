@@ -16,6 +16,8 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Diagnostics;
 using PatientManagementSystem.Classes;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Threading;
 
 namespace PatientManagementSystem
 {
@@ -32,7 +34,22 @@ namespace PatientManagementSystem
 
         List<UserInformation> userInformation = new List<UserInformation>();
 
-        //public string patientId { get; set; } = "0000";
+        private DispatcherTimer timer;
+
+        public PatientRadiographic()
+        {
+            InitializeComponent();
+            _dbManager = new DatabaseManager();
+
+
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
+            this.DataContext = this;
+        }
 
         private string _impression;
         private string _interpretation;
@@ -69,72 +86,73 @@ namespace PatientManagementSystem
 
         public string PatientId
         {
-            get { return _interpretation; }
+            get { return _patientId; }
             set
             {
-                if (_interpretation != value)
+                if (_patientId != value)
                 {
-                    _interpretation = value;
-                    OnPropertyChanged(nameof(Interpretation));
+                    _patientId = value;
+                    OnPropertyChanged(nameof(PatientId));
                 }
             }
         }
 
         public string ReferenceNo
         {
-            get { return _interpretation; }
+            get { return _referenceNo; }
             set
             {
-                if (_interpretation != value)
+                if (_referenceNo != value)
                 {
-                    _interpretation = value;
-                    OnPropertyChanged(nameof(Interpretation));
+                    _referenceNo = value;
+                    OnPropertyChanged(nameof(ReferenceNo));
                 }
             }
         }
 
         public string TypeOfExam
         {
-            get { return _interpretation; }
+            get { return _typeOfExam; }
             set
             {
-                if (_interpretation != value)
+                if (_typeOfExam != value)
                 {
-                    _interpretation = value;
-                    OnPropertyChanged(nameof(Interpretation));
+                    _typeOfExam = value;
+                    OnPropertyChanged(nameof(TypeOfExam));
                 }
             }
         }
 
         public string DateCreated
         {
-            get { return _interpretation; }
+            get { return _dateCreated; }
             set
             {
-                if (_interpretation != value)
+                if (_dateCreated != value)
                 {
-                    _interpretation = value;
-                    OnPropertyChanged(nameof(Interpretation));
+                    _dateCreated = value;
+                    OnPropertyChanged(nameof(DateCreated));
                 }
             }
         }
 
-        public PatientRadiographic()
-        {
-            InitializeComponent();
-            _dbManager = new DatabaseManager();
-            GetData();
-            this.DataContext = this;
-        }
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged(string propertyName)
+        protected virtual void OnPropertyChanged( [CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public void GetData()
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Call the GetData method
+            GetData();
+        }
+
+
+        public async void GetData()
         {
 
             try
@@ -159,7 +177,7 @@ namespace PatientManagementSystem
                     command.CommandText = "SELECT * FROM tbl_radiographic WHERE patientId = @ID";
                     command.Parameters.AddWithValue("@ID", _patientId);
 
-                    using (SQLiteDataReader reader = command.ExecuteReader())
+                   await using (SQLiteDataReader reader = command.ExecuteReader())
                     {
                         // Check if the query returned any rows.
                         if (reader.HasRows)
@@ -180,32 +198,14 @@ namespace PatientManagementSystem
 
                             string dateCreated = reader.IsDBNull(6) ? null : reader.GetString(6);
 
-                            //userData.Add(
-                            //new IRadiographic
-                            //{
-                            //    Id = id,
-                            //    Impression = impression,
-                            //    Interpretation = interpretation,
-                            //    PatientId = patientId,
-                            //    ReferenceNo = referenceNo,
-                            //    TypeOfExam = typeOfExam,
-                            //    DateCreated = dateCreated
 
-                            //});
-
-                            //Impression = impression;
-                            //Interpretation = interpretation;
-                            //PatientId = $"{patientId}";
-                            //ReferenceNo = referenceNo;
-                            //TypeOfExam = typeOfExam;
-                            //DateCreated = DateCreated;
-
-                            Impression = impression;
-                            Interpretation = interpretation;
-                            PatientId = $"{patientId}";
-                            ReferenceNo = reader.IsDBNull(4) ? null : reader.GetString(4);
-                            TypeOfExam = reader.IsDBNull(5) ? null : reader.GetString(5);
-                            DateCreated = reader.IsDBNull(6) ? null : reader.GetString(6);
+                          
+                            this.Impression = impression;
+                            this.Interpretation = interpretation;
+                            this.PatientId = $"{patientId}";
+                            this.ReferenceNo = referenceNo;
+                            this.TypeOfExam = typeOfExam;
+                            this.DateCreated = dateCreated;
 
                         }
                         else
@@ -221,64 +221,43 @@ namespace PatientManagementSystem
             }
             finally
             {
-                DisplayData();
+                _dbManager.CloseConnection();
             }
 
         }
 
-        public  void  DisplayData()
-        {
-            try
-            {
-                //lblRadioId.Text = "TESTING NATEN";
-
-            }
-            catch (Exception e) { Debug.WriteLine("Error in displaying data" + e.Message); }
-        }
 
         private void ButtonLogout_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.LogoutPatient();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+      
 
+        private void BtnGoToLabTest_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.GoToPatientLabTest();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void BtnPatientGoToDrugTest_Click(object sender, RoutedEventArgs e)
         {
-
+            mainWindow.GoToPatientDrugTest();
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void BtnGoToPatientHerma_Click(object sender, RoutedEventArgs e)
         {
-
+            mainWindow.GoToPatientHermatogloy();
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void BtnGoToPatientRadio_Click(object sender, RoutedEventArgs e)
         {
-
+            mainWindow.GoToPatientRadiographic();
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void BtnGoToPatientFecalysis_Click(object sender, RoutedEventArgs e)
         {
-
+            mainWindow.GoToPatientFecalysis();
         }
 
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

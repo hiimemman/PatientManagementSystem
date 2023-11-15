@@ -36,6 +36,18 @@
     <Compile Update="Patient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PatientDrugTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PatientFecalysis.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PatientHermatology.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PatientLaboratoryTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PatientLogin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -81,6 +93,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Patient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientDrugTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientFecalysis.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientHermatology.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientLaboratoryTest.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PatientLogin.xaml">

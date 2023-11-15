@@ -177,3 +177,13 @@ C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\refin
 C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientManagementSystem.pdb
 C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientManagementSystem.genruntimeconfig.cache
 C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\ref\PatientManagementSystem.dll
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientDrugTest.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientFecalysis.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientHermatology.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientLab.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientLaboratoryTest.g.cs
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientDrugTest.baml
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientFecalysis.baml
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientHermatology.baml
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientLab.baml
+C:\Users\Emmanuel\Desktop\PatientManagementSystem\obj\Debug\net7.0-windows\PatientLaboratoryTest.baml

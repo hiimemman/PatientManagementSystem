@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Emmanuel\Desktop\PatientManagementSystem\App.xaml
-161020676118
+21-993340349
 211384058413
-221219918635
+27-1813439954
 261176583711
-ChooseRole.xaml;Dashboard.xaml;DrugTest.xaml;Fecalysis.xaml;Hermatology.xaml;LaboratoryTest.xaml;LoadingScreen.xaml;LogIn.xaml;Patient.xaml;PatientLogin.xaml;PatientManagementSystem.xaml;PatientRadiographic.xaml;Radiographic.xaml;Register.xaml;Users.xaml;UserSettings.xaml;
+ChooseRole.xaml;Dashboard.xaml;DrugTest.xaml;Fecalysis.xaml;Hermatology.xaml;LaboratoryTest.xaml;LoadingScreen.xaml;LogIn.xaml;Patient.xaml;PatientDrugTest.xaml;PatientFecalysis.xaml;PatientHermatology.xaml;PatientLab.xaml;PatientLaboratoryTest.xaml;PatientLogin.xaml;PatientManagementSystem.xaml;PatientRadiographic.xaml;Radiographic.xaml;Register.xaml;Users.xaml;UserSettings.xaml;
 
 True
 

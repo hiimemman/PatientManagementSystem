@@ -40,7 +40,10 @@
 
         <Grid x:Name="patientContentGrid" Visibility="Hidden">
             <local:PatientRadiographic x:Name="patientRadiographicControl" Visibility="Collapsed"/>
-
+            <local:PatientDrugTest x:Name="patientDrugTestControl" Visibility="Collapsed"/>
+            <local:PatientLaboratoryTest x:Name="patientLaboratoryTestControl" Visibility="Collapsed" />
+            <local:PatientHermatology x:Name="patientHermatologyControl" Visibility="Collapsed" />
+            <local:PatientFecalysis x:Name="patientFecalysisControl" Visibility="Collapsed"/>
         </Grid>
         
     </Grid>

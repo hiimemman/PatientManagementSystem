@@ -46,6 +46,54 @@ namespace PatientManagementSystem
             GoToLogIn();
         }
 
+        public void GoToPatientFecalysis()
+        {
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Visible;
+            patientRadiographicControl.Visibility = Visibility.Collapsed;
+            patientLaboratoryTestControl.Visibility = Visibility.Collapsed;
+            patientDrugTestControl.Visibility = Visibility.Collapsed;
+            patientHermatologyControl.Visibility = Visibility.Collapsed;
+            patientFecalysisControl.Visibility = Visibility.Visible;
+        }
+
+        public void GoToPatientHermatogloy()
+        {
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Visible;
+            patientRadiographicControl.Visibility = Visibility.Collapsed;
+            patientLaboratoryTestControl.Visibility = Visibility.Collapsed;
+            patientDrugTestControl.Visibility = Visibility.Collapsed;
+            patientHermatologyControl.Visibility = Visibility.Visible;
+            patientFecalysisControl.Visibility = Visibility.Collapsed;
+        }
+
+        public void GoToPatientDrugTest()
+        {
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Visible;
+            patientRadiographicControl.Visibility = Visibility.Collapsed;
+            patientLaboratoryTestControl.Visibility = Visibility.Collapsed;
+            patientDrugTestControl.Visibility = Visibility.Visible;
+            patientHermatologyControl.Visibility = Visibility.Collapsed;
+            patientFecalysisControl.Visibility = Visibility.Collapsed;
+        }
+
+        public void GoToPatientLabTest()
+        {
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Visible;
+            patientRadiographicControl.Visibility = Visibility.Collapsed;
+            patientLaboratoryTestControl.Visibility = Visibility.Visible;
+            patientDrugTestControl.Visibility = Visibility.Collapsed;
+            patientHermatologyControl.Visibility = Visibility.Collapsed;
+            patientFecalysisControl.Visibility = Visibility.Collapsed;
+        }
+
         public void GoToPatientRadiographic()
         {
             
@@ -53,6 +101,10 @@ namespace PatientManagementSystem
             patientControl.Visibility = Visibility.Collapsed;
             patientContentGrid.Visibility = Visibility.Visible;
             patientRadiographicControl.Visibility = Visibility.Visible;
+            patientLaboratoryTestControl.Visibility = Visibility.Collapsed;
+            patientDrugTestControl.Visibility = Visibility.Collapsed;
+            patientHermatologyControl.Visibility = Visibility.Collapsed;
+            patientFecalysisControl.Visibility = Visibility.Collapsed;
         }
 
         public void GoToChooseRole()
