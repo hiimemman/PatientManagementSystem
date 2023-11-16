@@ -140,7 +140,7 @@
             </ScrollViewer>
             <Button Content="Add new" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="#FF86EFAC" Width="101" Click="ShowAddWindow_Click"/>
             <Button Content="Refresh" HorizontalAlignment="Left" Margin="116,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="White" Width="101" Click="Refresh_Click"/>
-
+            <Button Content="Print" HorizontalAlignment="Left" Margin="222,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="White" Width="69" Click="Print_Click"/>
             <TextBox Name="searchTextBox" HorizontalAlignment="Right" Margin="0,81,104,0" TextWrapping="Wrap" Text="Search for item here...." VerticalAlignment="Top" Width="300" KeyDown="searchTextBox_KeyDown" TextChanged="searchTextBox_TextChanged" />
             <Button Content="Search" HorizontalAlignment="Right" VerticalAlignment="Top" Width="74" Margin="0,80,10,0" Click="searchButton_Click" Background="#FF052E16" Foreground="White" />
 

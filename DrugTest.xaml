@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PatientManagementSystem"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="2500" d:DesignWidth="800">
     <Grid>
         <!-- Sidebar -->
         <Grid x:Name="gridSideBar" Visibility="Visible">
@@ -49,7 +49,7 @@
 
                 </Button>
 
-                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="Button_Click_3">
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="100" Click="Button_Click_8">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/baseline_description_white_24dp.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
@@ -58,7 +58,7 @@
 
                 </Button>
 
-                <Button Margin="0,0,0,0" Background="#FF1E40AF" HorizontalAlignment="Left" Width="100" Click="Button_Click_4">
+                <Button Margin="0,0,0,0" Background="#FF1E40AF" HorizontalAlignment="Left" Width="100"  Click="Button_Click_4">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/pill-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
@@ -67,7 +67,7 @@
 
                 </Button>
 
-                <Button  Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left"  Width="99" Click="Button_Click_5">
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="Button_Click_5">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/test-tube-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
@@ -76,7 +76,7 @@
 
                 </Button>
 
-                <Button  Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left"  Width="99" Click="Button_Click_6">
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="Button_Click_6">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/radiology-box-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
@@ -85,7 +85,7 @@
 
                 </Button>
 
-                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="100" Click="Button_Click_7">
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="Button_Click_3">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/emoticon-poop-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
@@ -115,39 +115,88 @@
             </StackPanel>
         </Grid>
         <!-- Main Content -->
-        <Grid  Grid.ColumnSpan="2" Margin="100,0,0,0" Background="#FF1E293B" x:Name="gridDataTable" Visibility="Visible">
-            <Label Content="Drug Test" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="30" Width="150" FontWeight="Bold"/>
+        <Grid Grid.ColumnSpan="2" Margin="100,0,0,0" Background="#FF1E293B" x:Name="gridDataTable" Visibility="Visible">
+            <Label Content="Drug Test" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="30" Width="152" FontWeight="Bold"/>
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+            <DataGrid x:Name="dataGrid" Margin="10,120,0,60"  ItemsSource="{Binding users}" >
 
-                <DataGrid x:Name="dataGrid" Margin="10,120,0,60"  ItemsSource="{Binding users}" >
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="Height" Value="25" />
+                        <Setter Property="FontWeight" Value="Black" />
+                        <Setter Property="SeparatorBrush" Value="LightGray" />
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}" Margin="20,0"/>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
 
-                    <DataGrid.ColumnHeaderStyle>
-                        <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="HorizontalContentAlignment" Value="Center" />
-                            <Setter Property="Height" Value="25" />
-                            <Setter Property="FontWeight" Value="Black" />
-                            <Setter Property="SeparatorBrush" Value="LightGray" />
-                            <Setter Property="ContentTemplate">
-                                <Setter.Value>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding}" Margin="20,0"/>
-                                    </DataTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </DataGrid.ColumnHeaderStyle>
+            </DataGrid>
+            <Button Content="Add new" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="#FF86EFAC" Width="101" Click="Button_Click"/>
+            <Button Content="Refresh" HorizontalAlignment="Left" Margin="116,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="White" Width="101" Click="Refresh_Click"/>
 
-                </DataGrid>
-            </ScrollViewer>
-           
-            <Button Content="Refresh" HorizontalAlignment="Left" Margin="8,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="White" Width="101" Click="Refresh_Click"/>
+            <Button Content="Print" HorizontalAlignment="Left" Margin="222,80,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="White" Width="69" Click="Print_Click"/>
 
             <TextBox Name="searchTextBox" HorizontalAlignment="Right" Margin="0,81,104,0" TextWrapping="Wrap" Text="Search for item here...." VerticalAlignment="Top" Width="300" KeyDown="searchTextBox_KeyDown" TextChanged="searchTextBox_TextChanged" />
             <Button Content="Search" HorizontalAlignment="Right" VerticalAlignment="Top" Width="74" Margin="0,80,10,0" Click="searchButton_Click" Background="#FF052E16" Foreground="White" />
 
         </Grid>
+        <ScrollViewer Margin="0,0,0,0" x:Name="gridAddData" Visibility="Collapsed" >
+            <Grid Background="Transparent" Width="800" Height="2500" Margin="0,26,0,0">
+                <Label Content="ADD DRUG TEST RESULT" HorizontalAlignment="Center" FontSize="50" Foreground="#FFF3E9E9" Margin="0,34,0,1882" FontFamily="Century Gothic" FontWeight="Bold"/>
 
-        
+                <Label Content="Patient Id" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,123,0,1823" Width="155"/>
+                <TextBox x:Name="txtPatientId" HorizontalAlignment="Left" Margin="20,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="FullName" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,258,0,1689" Width="155"/>
+                <TextBox x:Name="txtFullName" HorizontalAlignment="Left" Margin="20,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="ReportDate" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,413,0,129" Width="200"/>
+                <TextBox x:Name="txtReportDate" HorizontalAlignment="Left" Margin="20,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="TestMethod" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,558,0,224" Width="200"/>
+                <TextBox x:Name="txtTestMethod" HorizontalAlignment="Left" Margin="20,628,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="Gender" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,722,0,300" Width="155"/>
+                <TextBox x:Name="txtGender" HorizontalAlignment="Left" Margin="20,794,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="Purpose" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,879,0,383" Width="155"/>
+                <TextBox x:Name="txtPurpose" HorizontalAlignment="Left" Margin="20,950,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="Requesting Parties" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1039,0,882" Width="278"/>
+                <TextBox x:Name="txtRequestingParties" HorizontalAlignment="Left" Margin="20,1092,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="MethResult" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1174,0,752" Width="200"/>
+                <TextBox x:Name="txtMethResult" HorizontalAlignment="Left" Margin="20,1223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="MethRemarks" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1274,0,675" Width="200"/>
+                <TextBox x:Name="txtMethRemarks" HorizontalAlignment="Left" Margin="20,1325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="TetraResult" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1375,0,0" Width="155"/>
+                <TextBox x:Name="txtTetraResult" HorizontalAlignment="Left" Margin="20,1435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="TetraRemarks" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1490,0,46" Width="200"/>
+                <TextBox x:Name="txtTetraRemarks" HorizontalAlignment="Left" Margin="20,1550,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="Analyst" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1600,0,50" Width="155"/>
+                <TextBox x:Name="txtAnalyst" HorizontalAlignment="Left" Margin="20,1663,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Label Content="Head Of Lab" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1724,0,46" Width="200"/>
+                <TextBox x:Name="txtHeadOfLab" HorizontalAlignment="Left" Margin="20,1800,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+
+                <Label Content="CCF NO:" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,1850,0,-26" Width="200"/>
+                <TextBox x:Name="txtCCFNO" HorizontalAlignment="Left" Margin="20,1913,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="722" FontSize="30" BorderBrush="#FF075985"/>
+
+                <Button Content="SAVE" HorizontalAlignment="Left" Margin="20,1996,0,0" VerticalAlignment="Top" Background="#FF052E16" Foreground="White" Width="478" Click="AddData_Click" Height="58"/>
+                <Button Content="CANCEL" HorizontalAlignment="Left" Margin="503,1998,0,0" VerticalAlignment="Top" Background="Gray" Foreground="White" Width="239" Click="ShowWindow_Click" Height="56"/>
+            </Grid>
+
+        </ScrollViewer>
     </Grid>
 </UserControl>

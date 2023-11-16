@@ -208,10 +208,7 @@ namespace PatientManagementSystem
                             this.DateCreated = dateCreated;
 
                         }
-                        else
-                        {
-                            MessageBox.Show("Wrong Email or Password");
-                        }
+                      
                     }
                 }
             }

@@ -17,7 +17,8 @@ using System.Data.SQLite;
 using Newtonsoft.Json;
 using System.Reflection.PortableExecutable;
 
-
+using PatientManagementSystem.Classes;
+using System.Diagnostics;
 namespace PatientManagementSystem
 {
 
@@ -80,6 +81,18 @@ namespace PatientManagementSystem
                     {
                         if (reader.HasRows)
                         {
+                            // Read the first row.
+                            reader.Read();
+                            Debug.WriteLine(reader.GetInt32(0));
+                            // Add the user information to the class array.
+                            AdminSession.AddUser(
+                                new AdminSessionInformation()
+                                {
+                                    Id = reader.GetInt32(0),
+                                    Password = reader.GetString(4)
+                                }
+
+                            );
                             mainWindow.GoToPatient();
                         }
                         else
@@ -91,7 +104,7 @@ namespace PatientManagementSystem
             }
             catch (Exception ex)
             {
-                // Handle exceptions
+                MessageBox.Show($"Error: {ex}");
             }
         }
 

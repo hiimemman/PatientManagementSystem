@@ -43,6 +43,7 @@ namespace PatientManagementSystem
 
         public void LogoutAdmin()
         {
+            AdminSession.ClearUser();
             GoToLogIn();
         }
 
@@ -72,14 +73,14 @@ namespace PatientManagementSystem
 
         public void GoToPatientDrugTest()
         {
-            //patientLogin.Visibility = Visibility.Collapsed;
-            //patientControl.Visibility = Visibility.Collapsed;
-            //patientContentGrid.Visibility = Visibility.Visible;
-            //patientRadiographicControl.Visibility = Visibility.Collapsed;
-            //patientLaboratoryTestControl.Visibility = Visibility.Collapsed;
-            //patientDrugTestControl.Visibility = Visibility.Visible;
-            //patientHermatologyControl.Visibility = Visibility.Collapsed;
-            //patientFecalysisControl.Visibility = Visibility.Collapsed;
+            patientLogin.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            patientContentGrid.Visibility = Visibility.Visible;
+            patientRadiographicControl.Visibility = Visibility.Collapsed;
+            patientLaboratoryTestControl.Visibility = Visibility.Collapsed;
+            patientDrugTestControl.Visibility = Visibility.Visible;
+            patientHermatologyControl.Visibility = Visibility.Collapsed;
+            patientFecalysisControl.Visibility = Visibility.Collapsed;
         }
 
         public void GoToPatientLabTest()
@@ -213,19 +214,19 @@ namespace PatientManagementSystem
 
         public void GoToDrugTest()
         {
-            //contentGrid.Visibility = Visibility.Visible;
+            contentGrid.Visibility = Visibility.Visible;
 
-            //loginControl.Visibility = Visibility.Collapsed;
-            //registerControl.Visibility = Visibility.Collapsed;
-            //dashboardControl.Visibility = Visibility.Collapsed;
-            //patientControl.Visibility = Visibility.Collapsed;
-            //labTestControl.Visibility = Visibility.Collapsed;
-            //drugTestControl.Visibility = Visibility.Visible;
-            //fecalysisControl.Visibility = Visibility.Collapsed;
-            //hermatologyControl.Visibility = Visibility.Collapsed;
-            //radiographicControl.Visibility = Visibility.Collapsed;
-            //usersControl.Visibility = Visibility.Collapsed;
-            //userSettingsControl.Visibility = Visibility.Collapsed;
+            loginControl.Visibility = Visibility.Collapsed;
+            registerControl.Visibility = Visibility.Collapsed;
+            dashboardControl.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            labTestControl.Visibility = Visibility.Collapsed;
+            drugTestControl.Visibility = Visibility.Visible;
+            fecalysisControl.Visibility = Visibility.Collapsed;
+            hermatologyControl.Visibility = Visibility.Collapsed;
+            radiographicControl.Visibility = Visibility.Collapsed;
+            usersControl.Visibility = Visibility.Collapsed;
+            userSettingsControl.Visibility = Visibility.Collapsed;
         }
 
         public void GoToFecalysis()
@@ -295,18 +296,18 @@ namespace PatientManagementSystem
 
         public void GoToUserSettings()
         {
-            //contentGrid.Visibility = Visibility.Visible;
-            //loginControl.Visibility = Visibility.Collapsed;
-            //registerControl.Visibility = Visibility.Collapsed;
-            //dashboardControl.Visibility = Visibility.Collapsed;
-            //patientControl.Visibility = Visibility.Collapsed;
-            //labTestControl.Visibility = Visibility.Collapsed;
-            //drugTestControl.Visibility = Visibility.Collapsed;
-            //fecalysisControl.Visibility = Visibility.Collapsed;
-            //hermatologyControl.Visibility = Visibility.Collapsed;
-            //radiographicControl.Visibility = Visibility.Collapsed;
-            //usersControl.Visibility = Visibility.Collapsed;
-            //userSettingsControl.Visibility = Visibility.Visible;
+            contentGrid.Visibility = Visibility.Visible;
+            loginControl.Visibility = Visibility.Collapsed;
+            registerControl.Visibility = Visibility.Collapsed;
+            dashboardControl.Visibility = Visibility.Collapsed;
+            patientControl.Visibility = Visibility.Collapsed;
+            labTestControl.Visibility = Visibility.Collapsed;
+            drugTestControl.Visibility = Visibility.Collapsed;
+            fecalysisControl.Visibility = Visibility.Collapsed;
+            hermatologyControl.Visibility = Visibility.Collapsed;
+            radiographicControl.Visibility = Visibility.Collapsed;
+            usersControl.Visibility = Visibility.Collapsed;
+            userSettingsControl.Visibility = Visibility.Visible;
         }
 
         public void ShowAddPatient()

@@ -56,6 +56,22 @@ namespace PatientManagementSystem
             GetAllData();
         }
 
+        private void Print_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(dataGrid, "Print DataGrid");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void GetAllData()
         {
 

@@ -4,10 +4,150 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PatientManagementSystem"
-             
+             d:DataContext="{d:DesignInstance Type=local:PatientDrugTest}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="2500" d:DesignWidth="800" x:Name="PatientDrugTestUser">
+    <Grid >
+        <!-- Sidebar -->
+        <Grid Margin="0,0,0,0" x:Name="gridSideBar" Visibility="Visible">
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Background="#FF172554" Margin="0,0,100,0">
+                <!-- Add sidebar items here -->
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/ezaret-logo.png" Width="38" Height="40" Margin="1,0,10,0"/>
+                        <TextBlock Text="USER" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5" Width="53"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="BtnGoToLabTest_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/baseline_description_white_24dp.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Lab Test" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Margin="0,0,0,0" Background="#FF1E40AF" HorizontalAlignment="Left" Width="100" Click="BtnPatientGoToDrugTest_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/pill-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Drug Test" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="BtnGoToPatientHerma_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/test-tube-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Herma" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="BtnGoToPatientRadio_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/radiology-box-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Radio" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="BtnGoToPatientFecalysis_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/emoticon-poop-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Fecalysis" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="100" Click="ButtonLogout_Click">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/images/logout-variant-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Logout" VerticalAlignment="Center" FontFamily="Arial" FontSize="11" Foreground="#FFF4F4F5"/>
+                    </StackPanel>
+
+                </Button>
+
+            </StackPanel>
+        </Grid>
+        <!-- Main Content -->
+
+        <ScrollViewer Margin="0,0,0,0"   x:Name="gridDataTable" Visibility="Visible" IsHitTestVisible="False" >
+            <Grid  Grid.ColumnSpan="2" Margin="100,0,0,0" Background="#FF1E293B" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="234*"/>
+                    <RowDefinition Height="391*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Drug Test" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="30" Width="202" FontWeight="Bold"/>
+
+                <Label Content="PatientID :" HorizontalAlignment="Left" Margin="11,61,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=PatientId}" HorizontalAlignment="Left" Margin="256,61,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="CCFNO:" HorizontalAlignment="Right" Margin="0,61,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=CCFNO}" HorizontalAlignment="Right" Margin="0,61,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="FullName :" HorizontalAlignment="Left" Margin="11,161,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=FullName}" HorizontalAlignment="Left" Margin="256,161,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Transaction Date:" HorizontalAlignment="Right" Margin="0,161,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=TransactionDate}" HorizontalAlignment="Right" Margin="0,161,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Report Date :" HorizontalAlignment="Left" Margin="11,261,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=ReportDate}" HorizontalAlignment="Left" Margin="256,261,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Test Method:" HorizontalAlignment="Right" Margin="0,261,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=TestMethod}" HorizontalAlignment="Right" Margin="0,261,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Gender :" HorizontalAlignment="Left" Margin="11,361,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=Gender}" HorizontalAlignment="Left" Margin="256,361,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Purpose:" HorizontalAlignment="Right" Margin="0,361,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=Purpose}" HorizontalAlignment="Right" Margin="0,361,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+
+                <Label Content="Requesting Parties :" HorizontalAlignment="Left" Margin="11,461,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=RequestingParties}" HorizontalAlignment="Left" Margin="256,461,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Meth Result:" HorizontalAlignment="Right" Margin="0,461,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=MethResult}" HorizontalAlignment="Right" Margin="0,461,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+
+                <Label Content="Metra Remarks :" HorizontalAlignment="Left" Margin="11,561,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=MethRemarks}" HorizontalAlignment="Left" Margin="256,561,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Tetra Result:" HorizontalAlignment="Right" Margin="0,561,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=TetraResult}" HorizontalAlignment="Right" Margin="0,561,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+
+
+                <Label Content="Tetra Remarks :" HorizontalAlignment="Left" Margin="11,661,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=TetraRemarks}" HorizontalAlignment="Left" Margin="256,661,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Analyst:" HorizontalAlignment="Right" Margin="0,661,262,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=Analyst}" HorizontalAlignment="Right" Margin="0,661,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+                <Label Content="Head of lab :" HorizontalAlignment="Left" Margin="11,761,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25" FontWeight="DemiBold"/>
+                <Label Content = "{Binding Path=HeadOfLab}" HorizontalAlignment="Left" Margin="256,761,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F5" FontSize="25"/>
+
+
+
+
+
+            </Grid>
+        </ScrollViewer>
+
     </Grid>
 </UserControl>
