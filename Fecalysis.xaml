@@ -144,7 +144,7 @@
 
         </Grid>
         <ScrollViewer Margin="0,0,0,0" x:Name="gridAddData" Visibility="Collapsed" >
-        <Grid Background="Transparent" Width="800"  Visibility="Collapsed" Margin="0,26,0,0">
+        <Grid Background="Transparent" Width="800"   Margin="0,26,0,0">
             <Label Content="ADD FECALYSIS RESULT" HorizontalAlignment="Center" FontSize="50" Foreground="#FFF3E9E9" Margin="0,10,0,676" FontFamily="Century Gothic" FontWeight="Bold"/>
 
             <Label Content="Patient Id" FontSize="30" HorizontalAlignment="Left" Foreground="#FFF3E9E9" Margin="20,123,0,597" Width="155"/>

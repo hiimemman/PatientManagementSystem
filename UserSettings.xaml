@@ -49,7 +49,7 @@
 
                 </Button>
 
-                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="100" Click="Button_Click_8">
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="100" Click="Button_Click_3">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/baseline_description_white_24dp.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
@@ -85,7 +85,7 @@
 
                 </Button>
 
-                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="Button_Click_3">
+                <Button Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="99" Click="Button_Click_7">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/images/emoticon-poop-custom.png" Width="20" Height="20" Margin="1,0,10,0" HorizontalAlignment="Left"/>
