@@ -246,7 +246,7 @@ namespace PatientManagementSystem
                 // Perform a database query using a SQLiteCommand.
                 using (SQLiteCommand command = _dbManager.CreateCommand())
                 {
-                    command.CommandText = "SELECT * FROM tbl_patients WHERE " +
+                    command.CommandText = "SELECT * FROM tbl_laboratoryTest WHERE " +
                         "testName LIKE @SearchKeyword OR " +
                         "testDate LIKE @SearchKeyword OR " +
                         "testResult LIKE @SearchKeyword OR " +
